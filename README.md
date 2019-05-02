@@ -17,9 +17,13 @@ The resulting AMG hierarchhy with coarsened graphs will be stored in files level
 The input is accepted in several formats that can be found in readprint.cpp but the most straightforward is just a list of weighted edges with a single header row for the numbers of nodes and edges in a graph (extension .edges is mandatory). The node numbering is started with 1.
 
 Input graph example: can_1072.edges
+
 1072 5686   <-- number of nodes [space] number of edges
+
 1 2 1.0   <-- there is an edge from node 1 to node 2 with weight 1.0
+
 1 46 1.0   <-- there is an edge from node 1 to node 46 with weight 1.0
+
 ...
 
 Output file with a level k in AMG hierarchy:
