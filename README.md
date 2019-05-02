@@ -31,17 +31,27 @@ Input graph example: can_1072.edges
 ...
 
 Output file with a level k in AMG hierarchy:
+
 line 1: number of nodes [space] number of edges
+
 lines i in [2..end]: information about node i-1 and its adjacency
+
 line i structure:
+
 1. Starts with either 'c' (for a seed or coarse node that will be a center of some aggregate at level k+1) or 'f' (a fine node, i.e., a node that is fully or partially included in one or more of its 'c' neighbors)
+
 2. If there is a 'c'-node in line i, then the next integer is the id of its corresponsing aggregate at level k+1 followed by node weight (aka volume). If there is an 'f'-node in line i then next integer is immediately the node weight.
+
 3. Adjacency information that follows 'c' or 'f' node info:
+
 If node i-1 is a 'c' node, then the adjacency list includes pairs of the current level neighbor id and connecting edge weight. If node i-1 is an 'f' node, then the adjacency list includes either 
+
 -- pairs of the current level neighbor id and connecting edge weight if the neighbor is also 'f' node or
+
 -- triples of the current level neighbor id, connecting edge weight, and AMG interpolation weight denoted by 'iw:' if the neighbor is a 'c' node. Note that some interpolation weights could be zero which means that this 'f' node does not participate in the aggregate of this 'c' neighbor.
 
 Example:
+
 261 1493 <-- number of nodes [space] number of edges
 
 f 5.78261 65 10.5501 iw:0 121 9.15459 iw:0.523749 153 0.166667 46 0.26087 18 0.623819 iw:0 87 0.130435 9 8.32437 iw:0.476251 66 0.375 iw:0 77 0.564 516 iw:0 82 0.125 iw:0 130 5.33333 <-- node 1 is an 'f' node with weight 5.78261; it is connected to node 65 with edge weight 10.5501 but interpolation weight is 0; it is connected to node 121 with edge weight 9.15459 with  interpolation weight 0.523749 ...
