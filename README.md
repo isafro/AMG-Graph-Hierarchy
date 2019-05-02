@@ -51,6 +51,7 @@ c 1 8.11429 5 5.69048 125 7.04 170 6.42295 106 2.26642 216 2.21158 220 5.47048 2
 If you have any questions feel free to email at isafro@clemson.edu
 
 Explanation of basic AMG terminology on graphs is available in 
+
 Safro, Ron, Brandt, "Graph Minimum Linear Arrangement by Multilevel Weighted Edge Contractions", Journal of Algorithms, vol. 60/1, pp. 24-41, 2006
 
 
