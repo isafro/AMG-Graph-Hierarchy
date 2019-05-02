@@ -6,11 +6,13 @@ This repository contains several versions of algebraic multigrid coarsening for 
 If you use this code, please cite
 
 Dorit Ron, Ilya Safro, Achi Brandt, "Relaxation-based coarsening and multiscale graph organization", SIAM Multiscale Modeling and Simulations, Vol. 9, No. 1, pp. 407-423, 2011
+
 Jie Chen, Ilya Safro, "Algebraic distance on graphs", SIAM Journal on Scientific Computing, Vol. 33, No. 6, pp. 3468-3490, 2011
 
 The code contains many redundant procedures that were used to optimize different objectives on graphs and definitely requires some cleaning. The dependencies include only LEDA C++ library free edition (see http://www.algorithmic-solutions.com/index.php/products/leda-free-edition). The simplest way to use it is running
 
 > make
+
 > ./buildAMGhierarchy ./[graph_file] ./[parameter_file] [random_seed]
 
 The resulting AMG hierarchhy with coarsened graphs will be stored in files level[X].dat
