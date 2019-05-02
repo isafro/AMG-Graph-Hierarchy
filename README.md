@@ -17,7 +17,8 @@ The code contains many redundant procedures that were used to optimize different
 
 The resulting AMG hierarchhy with coarsened graphs will be stored in files level[X].dat
 The input is accepted in several formats that can be found in readprint.cpp but the most straightforward is just a list of weighted edges with a single header row for the numbers of nodes and edges in a graph (extension .edges is mandatory). The node numbering is started with 1.
-Examples of parameters are available in coarsening_param1 (aggregates full nodes) and coarsening_param2 (splits fine nodes in at most two parts)
+
+Examples of parameters are available in coarsening_param1 (aggregates full nodes) and coarsening_param2 (splits fine nodes in at most two parts). Both parameter files describe relaxation-based coarsening that is based on the algebraic distances. Let me know if you need other simplified types of coarsening.
 
 Input graph example: can_1072.edges
 
